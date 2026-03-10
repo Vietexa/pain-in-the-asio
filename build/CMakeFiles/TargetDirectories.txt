@@ -1,0 +1,3 @@
+/home/vietexa/Desktop/tsst/build/CMakeFiles/server.dir
+/home/vietexa/Desktop/tsst/build/CMakeFiles/edit_cache.dir
+/home/vietexa/Desktop/tsst/build/CMakeFiles/rebuild_cache.dir
