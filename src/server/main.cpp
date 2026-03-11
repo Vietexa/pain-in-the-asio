@@ -1,5 +1,7 @@
 #include <asio.hpp>
 #include <iostream>
+#include <memory>
+#include "include/chat.hpp"
 #include "include/server.hpp"
 
 
@@ -10,7 +12,8 @@ int main()
     {
         asio::io_context io;
 
-        server s(io, 12345);
+        std::unique_ptr<Chat> chat = std::make_unique<Chat>();
+        Server s(io, 12345, *chat);
 
         io.run();
     }

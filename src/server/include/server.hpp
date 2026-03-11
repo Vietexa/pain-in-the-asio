@@ -1,13 +1,19 @@
 #pragma once
+#include "chat.hpp"
+#include "session.hpp"
 #include <asio.hpp>
 using asio::ip::tcp;
 
-class server
+class Server
 {
     tcp::acceptor acceptor_;
+    Chat& chat_;
+
 
     public:
-    server(asio::io_context& io, short port);
+    
+    Server(asio::io_context& io, short port, Chat& chat);
+    
     
     private:
     void do_accept();
